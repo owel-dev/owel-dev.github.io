@@ -31,26 +31,23 @@ Java에서는 Interface라는 기능을 이용하여 이를 구현할 수 있습
 // Cat.java
 -------------------------------------------
 public class Cat {
-
-		void makeSound() {
-				System.out.println("야옹~");
-		}
+	void makeSound() {
+		System.out.println("야옹~");
+	}
 }
--------------------------------------------
 
 // Main.java
 -------------------------------------------
 public class Main {
-    public static void main(Stirng args[]) {
-
+    public static void main(Stirng[] args) {
         Cat cat = new Cat();
 
         cat.makeSound();
     }
 }
--------------------------------------------
 
 // 출력
+-------------------------------------------
 야옹~
 
 
@@ -74,37 +71,29 @@ public class Main {
 // Cat.java
 -------------------------------------------
 public class Cat {
-
-		void makeSound() {
-				System.out.println("야옹~");
-		}
+	void makeSound() {
+        System.out.println("야옹~");
+    }
 }
--------------------------------------------
 
 // Dog.java
 -------------------------------------------
 public class Cat {
 
-		void makeHowl() {
-				System.out.println("멍멍!");
-		}
+    void makeHowl() {
+        System.out.println("멍멍!");
+    }
 }
--------------------------------------------
 
 // Main.java
 -------------------------------------------
-
 public class Main {
-    public static void main(Stirng args[]) {
-
+    public static void main(Stirng[] args) {
         Cat cat = new Cat();
 
         cat.makeSound();
     }
 }
-
--------------------------------------------
-
 ```
 
 자, `Dog` 클래스를 새로 만들어 보았습니다.  
@@ -138,32 +127,28 @@ Java에서는 이를 Interface 라는 것을 사용하여 구현할 수 있습�
 // Animal.java
 -------------------------------------------
 Interface Animal {
-		public makeSound();
+	public makeSound();
 }
--------------------------------------------
 
 // Cat.java
 -------------------------------------------
 public class Cat implements Animal{
 
-		@Overide
-		void makeSound() {
-				System.out.println("야옹~");
-		}
+    @Overide
+    void makeSound() {
+        System.out.println("야옹~");
+    }
 }
--------------------------------------------
 
 // Dog.java
 -------------------------------------------
 public class Cat implements Animal{
 
-		@Overide
-		void makeSound() {
-				System.out.println("멍멍!");
-		}
+    @Overide
+    void makeSound() {
+        System.out.println("멍멍!");
+    }
 }
--------------------------------------------
-
 ```
 
 `Animal` 이라는 Interface를 만들어 보았습니다.  
@@ -174,15 +159,14 @@ Java에서는 Interface를 implements한 클래스는
 // Main.java
 -------------------------------------------
 public class Main {
-    public static void main(Stirng args[]) {
-
-        // Interface 타입의 변수는 자신을 구현한 클래스 타입의 인스턴스를 할당받을 수 있다.
+    public static void main(Stirng[] args) {
+        // Interface 타입의 변수는
+        // 자신을 구현한 클래스 타입의 인스턴스를 할당받을 수 있다.
 		Animal animal = new Cat();
 
         animal.makeSound();
     }
 }
--------------------------------------------
 ```
 
 Interface를 만들었으니 이제 이를 이용하여 `Main` 클래스의 코드를 바꿔보겠습니다.
@@ -227,14 +211,11 @@ public class AnimalMaker {
         return new Cat();
     }
 }
--------------------------------------------
 
 // Main.java
 -------------------------------------------
-
 public class Main {
-    public static void main(Stirng args[]) {
-
+    public static void main(Stirng[] args) {
         AnimalMaker animalMaker = new AnimalMaker();
 
         Animal animal = animalMaker.makeAnimal();
@@ -242,13 +223,11 @@ public class Main {
         animal.makeSound();
     }
 }
--------------------------------------------
 
 // Main2.java
 -------------------------------------------
 public class Main2 {
-    public static void main(Stirng args[]) {
-
+    public static void main(Stirng[] args) {
         AnimalMaker animalMaker2 = new AnimalMaker();
 
         Animal animal2 = animalMaker2.makeAnimal();
@@ -256,13 +235,11 @@ public class Main2 {
         animal2.makeSound();
     }
 }
--------------------------------------------
 
 // Main3.java
 -------------------------------------------
 public class Main3 {
-    public static void main(Stirng args[]) {
-
+    public static void main(Stirng[] args) {
         AnimalMaker animalMaker3 = new AnimalMaker();
 
         Animal animal3 = animalMaker3.makeAnimal();
@@ -270,7 +247,6 @@ public class Main3 {
         animal3.makeSound();
     }
 }
--------------------------------------------
 ```
 
 `Cat` 클래스의 인스턴스를 생성한 후 이를 반환하는 `makeAnimal()` 라는 메서드를 가진  
