@@ -17,6 +17,7 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
+    "deploy": "npm run build && gh-pages -d public -b main",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
@@ -77,6 +78,7 @@
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.25.0",
+    "gh-pages": "^5.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
