@@ -62,7 +62,7 @@ public class Main {
 `Cat` 클래스의 `makeSound()` 메서드의 내용을 `System.out.println("멍멍!");` 으로 바꾸자니  
 클래스 이름은 `Cat` 인데, 강아지 울음소리를 내는 메서드를 가지고 있다? 뭔가 맞지 않습니다.
 
-그리고, `Main` 클래스가 아닌 다른 클래스에서 `Cat` 클래스를 사용하고 있을 수도 있으므로  
+그리고, `Main` 클래스가 아닌 다른 클래스에서 `Cat` 클래스가 필요할 수도 있으므로  
 `Dog` 라는 이름의 클래스를 새로 만드는 것이 바람직해 보입니다.
 </br>
 
@@ -125,7 +125,7 @@ Java에서는 이를 Interface 라는 것을 이용하여 구현할 수 있습�
 // Animal.java
 -------------------------------------------
 Interface Animal {
-	public makeSound();
+	void makeSound();
 }
 
 // Cat.java
