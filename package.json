@@ -15,9 +15,9 @@
   "license": "MIT",
   "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
   "scripts": {
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && gatsby build --prefix-paths",
     "clean": "rimraf .cache public",
-    "deploy": "npm run build && gh-pages -d public -b main",
+    "deploy": "gatsby build && gh-pages -d public -b main",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
