@@ -1,5 +1,5 @@
 ---
-title: "객체지향에서 다형성이란 무엇인가와 사용 이유"
+title: "Interface와 다형성을 이용하여 고치기 쉬운 코드 만드는 법"
 date: "2023-05-28T17:00:00.169Z"
 template: "post"
 draft: false
